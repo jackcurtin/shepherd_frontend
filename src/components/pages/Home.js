@@ -3,5 +3,4 @@ function Home() {
         <p> Welcome to Shepherd </p>
      );
 }
-
 export default Home;
