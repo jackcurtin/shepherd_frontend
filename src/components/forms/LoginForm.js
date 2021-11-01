@@ -1,4 +1,6 @@
-import React, { Component, Fragment, useState } from 'react';
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 async function loginUser(credentials) {
     return fetch('http://localhost:8081/auth/login', {
@@ -39,6 +41,7 @@ export default function LoginForm({ setToken }) {
                     password:
                     <input type="password" onChange={event => setPassword(event.target.value)}/>
                 </label>
+                <input classname="submit-button" type="submit" value="Submit"/>
             </form>
         </div>
     );

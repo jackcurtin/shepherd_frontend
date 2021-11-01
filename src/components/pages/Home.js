@@ -1,19 +1,14 @@
-function Home() {
+import React, {useState} from "react";
+import LoginForm from "../forms/LoginForm";
+import useToken from "../useToken";
+
+
+
+export default function Home() {
+    const { token, setToken } = useToken();
     return ( 
         <div>
-            <p> Welcome to Shepherd </p>
-            <form>
-                <label>
-                    email
-                    <input></input>
-                </label>
-                <label>
-                    password
-                    <input></input>
-                </label>
-                <input type="submit" value="Submit"></input>
-            </form>
+            <LoginForm setToken={setToken}/>
         </div>
      );
 }
-export default Home;
